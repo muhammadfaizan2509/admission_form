@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admission Records</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Admission Records</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Father's Name</th>
+                        <th>CNIC</th>
+                        <th>Contact</th>
+                        <th>Course</th>
+                        <th>Shift</th>
+                    </tr>
+                </thead>
+                <tbody id="recordsTable">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+        // Fetch data from the backend and display it
+        fetch("http://localhost:5000/getRecords")
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById("recordsTable");
+            data.forEach(record => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${record.id}</td>
+                    <td>${record.name}</td>
+                    <td>${record.father_name}</td>
+                    <td>${record.cnic}</td>
+                    <td>${record.contact}</td>
+                    <td>${record.course.replace(/[\[\]"]+/g, '')}</td>
+                    <td>${record.shift}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => console.error("Error fetching data:", error));
+    </script>
+    </body>
+</html>

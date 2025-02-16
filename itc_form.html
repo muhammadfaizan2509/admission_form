@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admission Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <img src="logo.png" height="100" width="100">
+            <h2>INFORMATION TECHNOLOGY COLLEGE GHOTKI</h2>
+            <h3>Admission Form</h3>
+
+            <form id="admissionForm">
+
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <label>Name:</label> <input type="text" name="name"
+                        required><br>
+                    <label>Father's Name:</label> <input type="text"
+                        name="father_name" required><br>
+                    <label>Surname:</label> <input type="text"
+                        name="surname"><br>
+                    <label>Father's Occupation:</label> <input type="text"
+                        name="father_occupation"><br>
+                    <label>Address:</label> <textarea name="address"
+                        required></textarea><br>
+                    <label>Contact No:</label> <input type="tel" name="contact"
+                        required><br>
+                    <label>CNIC:</label> <input type="text" name="cnic"
+                        required><br>
+                    <label>Birth Date:</label> <input type="date"
+                        name="birth_date" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" value="male" required>
+                    Male
+                    <input type="radio" name="gender" value="female" required>
+                    Female<br>
+
+                    <label>Religion:</label>
+                    <select name="religion" required>
+                        <option>Islam</option>
+                        <option>Hinduism</option>
+                        <option>Christian</option>
+                        <option>Other</option>
+                    </select><br>
+
+                    <label>Nationality:</label>
+                    <select name="nationality" required>
+                        <option>Pakistani</option>
+                        <option>Foreigner</option>
+                    </select><br>
+
+                    <label>Occupation:</label>
+                    <select name="occupation" required>
+                        <option>Student</option>
+                        <option>Govt Servant</option>
+                        <option>Businessman</option>
+                        <option>Other</option>
+                    </select><br>
+
+                    <label>Marital Status:</label>
+                    <select name="marital_status" required>
+                        <option>Single</option>
+                        <option>Married</option>
+                        <option>Other</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Academic Qualification</legend>
+                    <table>
+                        <tr>
+                            <th>Qualification</th>
+                            <th>School / College</th>
+                            <th>Board / University</th>
+                            <th>Grade / Division</th>
+                            <th>Year</th>
+                        </tr>
+                        <tr>
+                            <td>Primary / Middle</td>
+                            <td><input type="text" name="primary_school"
+                                    required></td>
+                            <td><input type="text" name="primary_board"
+                                    required></td>
+                            <td><input type="text" name="primary_grade"
+                                    required></td>
+                            <td><input type="text" name="primary_year"
+                                    required></td>
+                        </tr>
+                        <tr>
+                            <td>Matric</td>
+                            <td><input type="text" name="matric_school"
+                                    required></td>
+                            <td><input type="text" name="matric_board"
+                                    required></td>
+                            <td><input type="text" name="matric_grade"
+                                    required></td>
+                            <td><input type="text" name="matric_year"
+                                    required></td>
+                        </tr>
+                        <tr>
+                            <td>Intermediate</td>
+                            <td><input type="text" name="inter_school"
+                                    required></td>
+                            <td><input type="text" name="inter_board"
+                                    required></td>
+                            <td><input type="text" name="inter_grade"
+                                    required></td>
+                            <td><input type="text" name="inter_year"
+                                    required></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Admission Sought in</legend>
+                    <input type="checkbox" name="course" value="CIT"> CIT
+                    (Certification in IT)
+                    <input type="checkbox" name="course" value="beautician">
+                    Beautician
+                    <input type="checkbox" name="course" value="stitching">
+                    Stitching & Sewing
+                    <input type="checkbox" name="course" value="kids_course">
+                    Kids Computer Course
+                    <input type="checkbox" name="course" value="basic_english">
+                    Basic English
+                    <input type="checkbox" name="course"
+                        value="office_automation"> Office Automation
+                </fieldset>
+
+                <fieldset>
+                    <legend>Shift Preference</legend>
+                    <input type="radio" name="shift" value="morning" required>
+                    Morning
+                    <input type="radio" name="shift" value="afternoon">
+                    Afternoon
+                    <input type="radio" name="shift" value="evening"> Evening
+                    <label>Shift Time:</label> <input type="text"
+                        name="shift_time">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Terms and Conditions</legend>
+                    <p>- The Admission, tuition, and examination fees are
+                        non-refundable.</p>
+                    <p>- 80% class attendance is required to be eligible for the
+                        SBTE/TTBS exams.</p>
+                    <p>- Examination dates and certificates are issued by the
+                        respective boards.</p>
+                    <input type="checkbox" name="agree" required> I agree to the
+                    terms and conditions.
+                </fieldset>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
