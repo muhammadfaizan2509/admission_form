@@ -19,6 +19,6 @@ document
       body: JSON.stringify(data),
     })
       .then((response) => response.text())
-      .then((message) => alert(message))
+      //.then((message) => alert(message))
       .catch((error) => console.error("Error:", error));
   });
